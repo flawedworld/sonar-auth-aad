@@ -16,12 +16,12 @@ jobs:
       - name: Build and Test with Maven
         run: mvn --batch-mode --update-snapshots package
       - name: Upload Packaged JAR
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: plugin-binary
           path: target/*.jar
       - name: Upload Code Coverage Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: code-coverage-report
           path: target/jacoco-ut/
